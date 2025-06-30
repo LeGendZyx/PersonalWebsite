@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ParticlesBackground from "../components/ParticlesBackground";
 
 const Home = () => {
     return (
@@ -10,7 +9,7 @@ const Home = () => {
                     欢迎来到我的个人网站
                 </h1>
                 <p className="text-blue-200 mb-8 text-base sm:text-lg">
-                    我是庄以煊，一名热爱技术与创作的开发者，欢迎查看我的简历。
+                    我是LeGendZ，一名热爱技术与创作的开发者，欢迎查看我的简历。
                 </p>
                 <div className="flex justify-center gap-4">
                     <Link
