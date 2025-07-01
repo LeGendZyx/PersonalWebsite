@@ -28,6 +28,13 @@ app.post('/api/visit', (req, res) => {
         .catch(err => res.status(500).send('Error recording visit'));
 });
 
+// 获取访问次数
+app.get('/api/visit', async (req, res) => {
+    const count = await Visit.countDocuments({});
+    res.json({ visits: count });
+});
+
+
 // 启动服务
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
