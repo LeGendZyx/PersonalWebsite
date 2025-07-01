@@ -3,13 +3,9 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
     useEffect(() => {
-        const hasVisited = sessionStorage.getItem("hasVisited");
-        if (!hasVisited) {
-            fetch('https://legendz.up.railway.app/api/visit', {
-                method: 'POST'
-            });
-            sessionStorage.setItem('hasVisited', 'true');
-        }
+        fetch('https://legendz.up.railway.app/api/visit', {
+            method: 'POST'
+        });
     }, []);
 
     return (
