@@ -1,7 +1,13 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+    useEffect(() => {
+        fetch('https://legendz.up.railway.app/api/visit', {
+            method: 'POST'
+        });
+    }, []);
+
     return (
         <div className="h-[calc(100vh-80px)] bg-transparent text-blue-100 flex justify-center px-4 relative z-10 pt-12">
             <div className="text-center max-w-xl">
